@@ -19,8 +19,8 @@
       <ul class="navbar-nav navbar-right">
         <!-- Authentication Links -->
         @guest
-          <li class="nav-item"><a class="nav-link" href="{{ route('login')  }}">登录</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ route('login')  }}">{{ __("Login") }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">{{ __("Register") }}</a></li>
         @else
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -30,13 +30,13 @@
               {{ Auth::user()->name }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="">个人中心</a>
-              <a class="dropdown-item" href="">编辑资料</a>
+              <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">{{ __("users.Personal Center") }}</a>
+              <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">{{ __("users.Edit Info") }}</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="logout" href="#">
                 <form action="{{ route('logout') }}" method="POST">
                   {{ csrf_field() }}
-                  <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
+                  <button class="btn btn-block btn-danger" type="submit" name="button">{{ __("Logout") }}</button>
                 </form>
               </a>
             </div>

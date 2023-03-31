@@ -13,10 +13,10 @@
              alt="{{ $user->name }}">
         <div class="card-body">
           <h5><strong>{{ __("users.Personal Profile") }}</strong></h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          <p>{{ $user->introduction }} </p>
           <hr>
           <h5><strong>{{ __("users.Registered on") }}</strong></h5>
-          <p>January 01 1901</p>
+          <p>{{ $user->created_at }}</p>
         </div>
       </div>
     </div>

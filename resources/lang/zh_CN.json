@@ -7,5 +7,7 @@
     "Please enter the correct verification code": "请输入正确的验证码",
     "Mailbox verification succeeded": "邮箱验证成功 ^_^",
     "Password updated successfully": "密码更新成功！",
-    "No data": "暂无数据 ~_~"
+    "No data": "暂无数据 ~_~",
+    "Logout": "退出",
+    "An error occurred": "有错误发生"
 }
