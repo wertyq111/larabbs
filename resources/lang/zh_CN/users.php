@@ -14,4 +14,6 @@ return [
     "Usernames only support English, numbers, dashes, and underscores" => "用户名只支持英文、数字、横杠和下划线。",
     "Username must be between 3 and 25 characters" => "用户名必须介于 3 - 25 个字符之间。",
     "Username cannot be empty" => "用户名不能为空。",
+    "User avatar type" => "头像必须是 png, jpg, gif, jpeg 格式的图片",
+    "User avatar size" => "图片的清晰度不够，宽和高需要 208px 以上",
 ];

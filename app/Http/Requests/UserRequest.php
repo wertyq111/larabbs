@@ -29,7 +29,8 @@ class UserRequest extends FormRequest
         return [
             'name' => 'required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/|unique:users,name,'. Auth::id(),
             'email' => 'required|email|unique:users,email,'. Auth::id(),
-            'introduction' => 'max:80'
+            'introduction' => 'max:80',
+            'avatar' => 'mimes:png,jpg,gif,jpeg|dimensions:min_width=208,min_height=208',
         ];
     }
 
@@ -40,7 +41,9 @@ class UserRequest extends FormRequest
             'name.regex' => __('users.Usernames only support English, numbers, dashes, and underscores'),
             'name.between' => __('users.Username must be between 3 and 25 characters'),
             'name.required' => __('users.Username cannot be empty'),
-            'email.unique' => __("users.Email is already occupied")
+            'email.unique' => __("users.Email is already occupied"),
+            'avatar.mimes' => __('users.User avatar type'),
+            'avatar.dimensions' => __('users.User avatar size'),
         ];
     }
 
