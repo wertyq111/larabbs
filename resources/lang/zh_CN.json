@@ -6,5 +6,6 @@
     "Verification code cannot be empty": "验证码不能为空",
     "Please enter the correct verification code": "请输入正确的验证码",
     "Mailbox verification succeeded": "邮箱验证成功 ^_^",
-    "Password updated successfully": "密码更新成功！"
+    "Password updated successfully": "密码更新成功！",
+    "No data": "暂无数据 ~_~"
 }
