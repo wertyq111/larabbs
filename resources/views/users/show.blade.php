@@ -9,7 +9,13 @@
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-info">
       <div class="card ">
         <img class="card-img-top"
-             src="https://cdn.learnku.com/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/600/h/600"
+             src="
+             @if($user->avatar)
+               {{ $user->avatar }}
+             @else
+               https://cdn.learnku.com/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/600/h/600
+             @endif
+               "
              alt="{{ $user->name }}">
         <div class="card-body">
           <h5><strong>{{ __("users.Personal Profile") }}</strong></h5>
