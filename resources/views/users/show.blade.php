@@ -16,7 +16,7 @@
           <p>{{ $user->introduction }} </p>
           <hr>
           <h5><strong>{{ __("users.Registered on") }}</strong></h5>
-          <p>{{ $user->created_at }}</p>
+          <p>{{ $user->created_at->diffForHumans() }}</p>
         </div>
       </div>
     </div>
