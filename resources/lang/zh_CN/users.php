@@ -7,6 +7,7 @@ return [
     "Edit Info" => "编辑资料",
     "Username" => "用户名",
     "Email" => "邮 箱",
+    "User Avatar" => "用户头像",
     "Personal Profile updated successfully" => "个人资料更新成功",
     "Email is already occupied" => ":attribute 已存在相同的邮箱地址",
     "Username is already occupied, please fill it in again" => "用户名已被占用，请重新填写",
