@@ -40,11 +40,17 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item"
-                 href="{{ route('users.show', Auth::id()) }}">{{ __("users.Personal Center") }}</a>
-              <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">{{ __("users.Edit Info") }}</a>
+                 href="{{ route('users.show', Auth::id()) }}">
+                <i class="far fa-user mr-2"></i>
+                {{ __("users.Personal Center") }}
+              </a>
+              <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">
+                <i class="far fa-edit mr-2"></i>
+                {{ __("users.Edit Info") }}
+              </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="logout" href="#">
-                <form action="{{ route('logout') }}" method="POST">
+                <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('@lang('Are you sure logout')');">
                   {{ csrf_field() }}
                   <button class="btn btn-block btn-danger" type="submit" name="button">{{ __("Logout") }}</button>
                 </form>
