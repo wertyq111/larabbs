@@ -12,7 +12,11 @@
     <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav">
-
+        <li class="nav-item "><a class="nav-link {{ active_class(if_route('topics.index')) }}" href="{{ route('topics.index') }}">@lang("Category")</a></li>
+        <li class="nav-item"><a class="nav-link {{ category_nav_active(1) }}" href="{{ route('categories.show', 1) }}">@lang("Share")</a></li>
+        <li class="nav-item"><a class="nav-link {{ category_nav_active(2) }}" href="{{ route('categories.show', 2) }}">@lang("Document")</a></li>
+        <li class="nav-item"><a class="nav-link {{ category_nav_active(3) }}" href="{{ route('categories.show', 3) }}">@lang("Q&A")</a></li>
+        <li class="nav-item"><a class="nav-link {{ category_nav_active(4) }}" href="{{ route('categories.show', 4) }}">@lang("Notice")</a></li>
       </ul>
 
       <!-- Right Side Of Navbar -->

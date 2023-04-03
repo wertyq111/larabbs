@@ -9,5 +9,10 @@
     "Password updated successfully": "密码更新成功！",
     "No data": "暂无数据 ~_~",
     "Logout": "退出",
-    "An error occurred": "有错误发生"
+    "An error occurred": "有错误发生",
+    "Category": "话题",
+    "Share": "分享",
+    "Document": "教程",
+    "Q&A": "问答",
+    "Notice": "公告"
 }
