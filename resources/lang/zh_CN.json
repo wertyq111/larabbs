@@ -16,6 +16,9 @@
     "Q&A": "问答",
     "Notice": "公告",
     "Are you sure logout": "您确定要退出吗?",
-    "Please fill in at least three characters of content": "请填入至少三个字符的内容。"
+    "Please fill in at least three characters of content": "请填入至少三个字符的内容。",
+    "File upload is in progress. Closing this page will cancel the upload": "文件上传中，关闭此页面将取消上传。",
+    "Upload Failed": "上传失败",
+    "Upload Successful": "上传成功"
 
 }
