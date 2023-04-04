@@ -37,7 +37,7 @@
                     <select class="form-control" name="category_id" required>
                       <option value="" hidden disabled selected>@lang('topics.Select Categories')</option>
                       @foreach ($categories as $value)
-                        <option value="{{ $value->id }}">{{ $value->name }}</option>
+                        <option value="{{ $value->id }}" {{ $topic->category_id == $value->id ? 'selected' : '' }}>{{ $value->name }}</option>
                       @endforeach
                     </select>
                   </div>
@@ -67,20 +67,20 @@
   <script type="text/javascript" src="{{ asset('js/simditor.js') }}"></script>
 
   <script>
-    {{--$(document).ready(function() {--}}
-    {{--  var editor = new Simditor({--}}
-    {{--    textarea: $('#editor'),--}}
-    {{--    upload: {--}}
-    {{--      url: '{{ route('topics.upload_image') }}',--}}
-    {{--      params: {--}}
-    {{--        _token: '{{ csrf_token() }}'--}}
-    {{--      },--}}
-    {{--      fileKey: 'upload_file',--}}
-    {{--      connectionCount: 3,--}}
-    {{--      leaveConfirm: '@lang('File upload is in progress. Closing this page will cancel the upload')'--}}
-    {{--    },--}}
-    {{--    pasteImage: true--}}
-    {{--  });--}}
-    {{--});--}}
+    $(document).ready(function() {
+      var editor = new Simditor({
+        textarea: $('#editor'),
+        upload: {
+          url: '{{ route('topics.upload_image') }}',
+          params: {
+            _token: '{{ csrf_token() }}'
+          },
+          fileKey: 'upload_file',
+          connectionCount: 3,
+          leaveConfirm: '@lang('File upload is in progress. Closing this page will cancel the upload')'
+        },
+        pasteImage: true
+      });
+    });
   </script>
 @stop
