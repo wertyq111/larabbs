@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Topic;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function root()
+    public function root(Request $request, Topic $topic)
     {
-        return view('pages.root');
+        $topics = $topic->withOrder($request->order)
+            ->with('user', 'category')
+            ->paginate(20);
+        return view('topics.index', compact('topics'));
     }
 }
