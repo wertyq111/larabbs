@@ -55,6 +55,16 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
+     * 一对多关联用户回复
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+
+    /**
      * 同意验证模型 user 是否为当前登录用户
      *
      * @param $model
