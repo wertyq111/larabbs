@@ -14,6 +14,7 @@ return [
     'Updated successfully' => '话题更新成功',
     'Deleted successfully' => '话题删除成功',
     'Are you sure delete topic' => '您确定删除该话题?',
+    'Are you sure delete reply' => '您确定删除此评论?',
     'Title must be at least two characters long' => '标题必须至少两个字符',
     'Article content must be at least three characters long' => '文章内容必须至少三个字符',
     'Delete Reply' => '删除回复',

@@ -96,4 +96,15 @@ class Topic extends Model
     {
         return $this->hasMany(Reply::class);
     }
+
+    /**
+     * 统计回复数量
+     *
+     * @return void
+     */
+    public function updateReplyCount()
+    {
+        $this->reply_cout = $this->replies->cout();
+        $this->save();
+    }
 }
