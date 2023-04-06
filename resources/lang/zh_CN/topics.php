@@ -18,4 +18,8 @@ return [
     'Article content must be at least three characters long' => '文章内容必须至少三个字符',
     'Delete Reply' => '删除回复',
     'Reply to' => '回复于',
+    'Share your insights' => '分享你的见解~',
+    'Topic reply successfully' => '话题回复成功',
+    'Content cannot be empty' => '内容不能为空',
+    'Topic reply deleted successfully' => '话题回复删除成功',
 ];

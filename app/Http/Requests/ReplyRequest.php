@@ -13,6 +13,7 @@ class ReplyRequest extends Request
             {
                 return [
                     // CREATE ROLES
+                    'content' => 'required|min:3',
                 ];
             }
             // UPDATE
@@ -36,6 +37,8 @@ class ReplyRequest extends Request
     {
         return [
             // Validation messages
+            'content.required' => __('topics.Content cannot be empty'),
+            'content.min' => __('topics.Article content must be at least three characters long'),
         ];
     }
 }
