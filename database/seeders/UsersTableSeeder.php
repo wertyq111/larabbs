@@ -24,5 +24,12 @@ class UsersTableSeeder extends Seeder
         $user->email = 'zxf@163.com';
         $user->avatar = 'http://larabbs.test/uploads/images/avatars/202303/31/1_1680251784_KizOeGMDdC.jpg';
         $user->save();
+
+        // 初始化用户角色, 将 1 号用户指派为站长
+        $user->assignRole('Founder');
+
+        // 将 2 号用户指派为管理员
+        $user = User::find(2);
+        $user->assignRole('Maintainer');
     }
 }

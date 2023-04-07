@@ -10,10 +10,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable, MustVerifyEmailTrait;
+    use HasApiTokens, HasFactory, Notifiable, MustVerifyEmailTrait, HasRoles;
 
     use Notifiable {
         notify as protected laravelNotify;
@@ -27,7 +28,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     public function notify($instance)
     {
-        // 如果要通知的人是当前用户,且不是在验证邮箱, 就不必通知了
+        // 如果要通知的人是当前用户,且不是在验证邮箱, 就不必通知了(自己的话题下回复自己的时候)
         if($this->id == Auth::id() && !$instance instanceof VerifyEmail) {
             return;
         }
